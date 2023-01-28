@@ -3,7 +3,7 @@ import classes from './List.module.css'
 
 type Props = {}
 console.log(classes)
-const { content, test, articleDesc } = classes
+const { content, test, ['article-desc']: articleDesc } = classes
 
 export const List = (props: Props) => {
     let data = true
