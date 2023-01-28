@@ -1,4 +1,5 @@
 import React from 'react'
+import './List.css'
 
 type Props = {}
 
@@ -16,13 +17,7 @@ export const List = (props: Props) => {
                 <li>list 2</li>
                 <li>list 3</li>
             </ul>
-            <p
-                style={{
-                    color: 'white',
-                    backgroundColor: data ? 'purple' : 'tomato',
-                    padding: '15px',
-                }}
-            >
+            <p className="content">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
                 adipisci maiores, obcaecati facilis eius veritatis accusantium
                 blanditiis hic consequuntur, unde rerum aspernatur cupiditate
