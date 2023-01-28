@@ -4,6 +4,11 @@ type Props = {}
 
 export const List = (props: Props) => {
     let data = false
+    let styleObj = {
+        color: 'white',
+        backgroundColor: data ? 'purple' : 'tomato',
+        padding: '15px',
+    }
     return (
         <>
             <ul>
@@ -23,7 +28,7 @@ export const List = (props: Props) => {
                 blanditiis hic consequuntur, unde rerum aspernatur cupiditate
                 libero animi aut vitae. Beatae, quod laborum?
             </p>
-            <p>
+            <p style={styleObj}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nisi
                 quisquam expedita molestiae quod sit nemo laboriosam! Ut rerum,
                 nobis distinctio quaerat reiciendis inventore aspernatur
