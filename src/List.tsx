@@ -17,7 +17,7 @@ export const List = (props: Props) => {
                 <li>list 2</li>
                 <li>list 3</li>
             </ul>
-            <p className="content">
+            <p className={`article-desc ${data ? 'content' : 'test'}`}>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
                 adipisci maiores, obcaecati facilis eius veritatis accusantium
                 blanditiis hic consequuntur, unde rerum aspernatur cupiditate
