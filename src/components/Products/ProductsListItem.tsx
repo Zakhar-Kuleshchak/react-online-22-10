@@ -19,6 +19,7 @@ type Props = {
 
 class ProductsListItem extends Component<Props> {
     render() {
+        const { title, description, capacity, type, price, image } = this.props
         return (
             <Card className="product" variant="outlined">
                 <CardContent>
@@ -50,14 +51,4 @@ class ProductsListItem extends Component<Props> {
     }
 }
 
-// const ProductsListItem = ({
-//     title,
-//     description,
-//     capacity,
-//     type,
-//     price,
-//     image,
-// }: Props) => {
-
-// }
 export default ProductsListItem
