@@ -19,11 +19,13 @@ type Props = {
 
 type State = {
     count: number
+    color: string
 }
 
 class ProductsListItem extends Component<Props, State> {
     state = {
         count: 1,
+        color: 'green',
     }
 
     onIncrementClick = () => {
@@ -36,6 +38,20 @@ class ProductsListItem extends Component<Props, State> {
         this.setState((prevState) => ({
             count: prevState.count - num,
         }))
+    }
+
+    changeColor = () => {
+        this.setState((prevState) => {
+            if (prevState.color === 'green') {
+                return {
+                    color: 'red',
+                }
+            } else {
+                return {
+                    color: 'green',
+                }
+            }
+        })
     }
 
     render() {
@@ -52,11 +68,19 @@ class ProductsListItem extends Component<Props, State> {
                     <div className="product-features">
                         Capacity: {capacity} Gb
                     </div>
+                    <p>
+                        Color:{' '}
+                        <span className={this.state.color}>
+                            {this.state.color}
+                        </span>
+                    </p>
+                    <button onClick={this.changeColor}>Change color</button>
                     <div className="product-price">{price}$</div>
                     <div className="product-quantity">
                         <Button
                             variant="outlined"
                             onClick={() => this.onDecrementClick(2)}
+                            disabled={this.state.count <= 1}
                         >
                             -
                         </Button>
@@ -64,6 +88,7 @@ class ProductsListItem extends Component<Props, State> {
                         <Button
                             variant="outlined"
                             onClick={this.onIncrementClick}
+                            disabled={this.state.count >= 10}
                         >
                             +
                         </Button>
